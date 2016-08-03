@@ -230,7 +230,7 @@ public class PhotoGalleryFragment extends VisibleFragment {
         public void onBindViewHolder(PhotoHolder photoHolder, int position) {
             GalleryItem galleryItem = mGalleryItems.get(position);
             photoHolder.bindGalleryItem(galleryItem);
-            Drawable placeHolder = getResources().getDrawable(R.drawable.bill_up_close);
+            Drawable placeHolder = getResources().getDrawable(R.color.colorPrimary);
             photoHolder.bindDrawable(placeHolder);
             mThumbnailDownloader.queueThumbnail(photoHolder, galleryItem.getUrl());
         }

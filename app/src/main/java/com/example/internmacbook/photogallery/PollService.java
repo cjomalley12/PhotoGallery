@@ -22,7 +22,7 @@ import java.util.List;
 public class PollService extends IntentService {
     private static final String TAG = "PollService";
 
-    private static final long POLL_INTERVAL = 30000; //AlarmManager.INTERVAL_HALF_HOUR;
+    private static final long POLL_INTERVAL = AlarmManager.INTERVAL_HALF_HOUR;
 
     public static final String ACTION_SHOW_NOTIFICATION = "com.example.internmacbook.photogallery.SHOW_NOTIFICATION";
 
