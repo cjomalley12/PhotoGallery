@@ -1,12 +1,15 @@
 package com.example.internmacbook.photogallery;
 
+import android.net.Uri;
+
 /**
  * Created by internmacbook on 7/28/16.
  */
 public class GalleryItem {
     private String mCaption;
     private String mId;
-    private String mURl;
+    private String mUrl;
+    private String mOwner;
 
 
     @Override
@@ -30,13 +33,27 @@ public class GalleryItem {
         mId = id;
     }
 
-    public String getURl() {
-        return mURl;
+    public String getUrl() {
+        return mUrl;
     }
 
-    public void setURl(String URl) {
-        mURl = URl;
+    public void setUrl(String URl) {
+        mUrl = URl;
     }
 
+    public String getOwner() {
+        return mOwner;
+    }
 
+    public void setOwner(String owner) {
+        mOwner = owner;
+    }
+
+    public Uri getPhotoPageUri() {
+        return Uri.parse("http://www.flickr.com/photos/")
+                .buildUpon()
+                .appendPath(mOwner)
+                .appendPath(mId)
+                .build();
+    }
 }
